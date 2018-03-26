@@ -19,8 +19,6 @@
         <preference name="android-minSdkVersion" value="14" />
         <allow-intent href="market:*" />
     </platform>
-    <!-- <plugin name="cordova-plugin-camera" spec="^4.0.2" /> -->
-    
     <access origin="http://18.219.77.161/" />
     <icon src="icon.png" />
     <preference name="phonegap-version" value="cli-6.3.1" />

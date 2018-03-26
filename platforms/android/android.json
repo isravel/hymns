@@ -1,103 +1,103 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
-    },
-    "config_munge": {
-        "files": {
-            "res/xml/config.xml": {
-                "parents": {
-                    "/*": [
-                        {
-                            "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
-                            "count": 1
-                        }
-                    ]
-                }
-            },
-            "AndroidManifest.xml": {
-                "parents": {
-                    "/manifest": [],
-                    "/*": [
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-                            "count": 1
-                        }
-                    ],
-                    "application": [],
-                    "/manifest/application": [
-                        {
-                            "xml": "<provider android:authorities=\"${applicationId}.sharing.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"nl.xservices.plugins.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/sharing_paths\" /></provider>",
-                            "count": 1
-                        }
-                    ]
-                }
-            },
-            "*-Info.plist": {
-                "parents": {
-                    "NSCameraUsageDescription": [
-                        {
-                            "xml": "<string>need camera access to take pictures</string>",
-                            "count": 1,
-                            "mode": "merge",
-                            "id": "config.xml"
-                        }
-                    ],
-                    "NSPhotoLibraryUsageDescription": [
-                        {
-                            "xml": "<string>need photo library access to get pictures from there</string>",
-                            "count": 1,
-                            "mode": "merge",
-                            "id": "config.xml"
-                        }
-                    ],
-                    "NSLocationWhenInUseUsageDescription": [
-                        {
-                            "xml": "<string>need location access to find things nearby</string>",
-                            "count": 1,
-                            "mode": "merge",
-                            "id": "config.xml"
-                        }
-                    ],
-                    "NSPhotoLibraryAddUsageDescription": [
-                        {
-                            "xml": "<string>need photo library access to save pictures there</string>",
-                            "count": 1,
-                            "mode": "merge",
-                            "id": "config.xml"
-                        }
-                    ]
-                }
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "res/xml/config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
+              "count": 1
             }
+          ]
         }
-    },
-    "installed_plugins": {
-        "es6-promise-plugin": {
-            "PACKAGE_NAME": "com.phonegap.bookedapp"
-        },
-        "cordova-plugin-x-socialsharing": {
-            "PACKAGE_NAME": "com.phonegap.bookedapp"
+      },
+      "AndroidManifest.xml": {
+        "parents": {
+          "/manifest": [],
+          "/*": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+              "count": 1
+            }
+          ],
+          "application": [],
+          "/manifest/application": [
+            {
+              "xml": "<provider android:authorities=\"${applicationId}.sharing.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"nl.xservices.plugins.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/sharing_paths\" /></provider>",
+              "count": 1
+            }
+          ]
         }
-    },
-    "dependent_plugins": {},
-    "modules": [
-        {
-            "id": "es6-promise-plugin.Promise",
-            "file": "plugins/es6-promise-plugin/www/promise.js",
-            "pluginId": "es6-promise-plugin",
-            "runs": true
-        },
-        {
-            "id": "cordova-plugin-x-socialsharing.SocialSharing",
-            "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
-            "pluginId": "cordova-plugin-x-socialsharing",
-            "clobbers": [
-                "window.plugins.socialsharing"
-            ]
+      },
+      "*-Info.plist": {
+        "parents": {
+          "NSCameraUsageDescription": [
+            {
+              "xml": "<string>need camera access to take pictures</string>",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml"
+            }
+          ],
+          "NSPhotoLibraryUsageDescription": [
+            {
+              "xml": "<string>need photo library access to get pictures from there</string>",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml"
+            }
+          ],
+          "NSLocationWhenInUseUsageDescription": [
+            {
+              "xml": "<string>need location access to find things nearby</string>",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml"
+            }
+          ],
+          "NSPhotoLibraryAddUsageDescription": [
+            {
+              "xml": "<string>need photo library access to save pictures there</string>",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml"
+            }
+          ]
         }
-    ],
-    "plugin_metadata": {
-        "es6-promise-plugin": "4.2.2",
-        "cordova-plugin-x-socialsharing": "5.3.2"
+      }
     }
+  },
+  "installed_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.phonegap.bookedapp"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "com.phonegap.bookedapp"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "es6-promise-plugin.Promise",
+      "file": "plugins/es6-promise-plugin/www/promise.js",
+      "pluginId": "es6-promise-plugin",
+      "runs": true
+    },
+    {
+      "id": "cordova-plugin-x-socialsharing.SocialSharing",
+      "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+      "pluginId": "cordova-plugin-x-socialsharing",
+      "clobbers": [
+        "window.plugins.socialsharing"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "es6-promise-plugin": "4.2.2",
+    "cordova-plugin-x-socialsharing": "5.3.2"
+  }
 }

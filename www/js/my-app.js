@@ -20,7 +20,7 @@ var app = new Framework7({
     },
     statusbar: {
         iosOverlaysWebview: true,
-        overlay: true
+        
     },
     data: function() {
         return {

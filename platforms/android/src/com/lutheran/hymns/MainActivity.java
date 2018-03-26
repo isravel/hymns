@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.phonegap.bookedapp;
+package com.lutheran.hymns;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

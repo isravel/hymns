@@ -45,7 +45,7 @@
                     <div class="toolbar-inner">
                         <a href="#tab-1" class="tab-link tab-link-active"><i class="icon f7-icons">list_fill</i></a>
                         <a href="/song/1/" class="tab-link"><i class="icon f7-icons">tune_fill</i></a>
-                        <a href="#tab-1" class="tab-link"><i class="icon f7-icons">settings_fill</i></a>
+                        <a href="/settings/" class="tab-link"><i class="icon f7-icons">settings_fill</i></a>
                     </div>
                 </div>
                 <div class="page-content">
@@ -70,7 +70,7 @@
     <script src="js/my-app.js"></script>
     <script type="text/javascript">
     
-    jQuery.getJSON("song.json", function(obj) {
+    jQuery.getJSON("sl", function(obj) {
             jQuery.each(obj, function(key, value) {
                 jQuery("#song_list").append('<li class="item-content"> \
                     <a href="/song/' + value.number + '/" class="link item-inner"> \
